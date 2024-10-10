@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+
+body,
+.time,
+.leftside,
+.rightside,
+.date,
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.rightside {
+    flex-direction: column;
+}
+
+.digitalclock {
+    background-color: black;
+    color: #fafafa;
+    padding: 20px 40px;
+    width: 425px; /* Corrected width unit */
+    border-radius: 20px;
+    box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.5); /* Corrected box-shadow value */
+}
+
+#hours {
+    font-size: 6rem;
+    font-weight: 600;
+    margin-bottom: 75px;
+}
+
+#dots {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#minutes {
+    font-size: 5.3rem;
+    font-weight: 600;
+    margin-right: 20px;
+    
+}
+
+#seconds {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-left: 30px; /* Adjust the spacing as needed */
+    order: -1; /* Move the seconds element before the minutes */
+    margin-top: 18px;
+}
+
+
+
+    #ampm {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: yellow;
+        padding-top: 2px; /* Add padding instead of margin */
+        padding-left: 35px;
+    }
+    
+
+.rightbottom {
+    margin-left: 60px;
+    transform: translateY(-26px);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the items vertically */
+}
+
+#dd,
+#ddmmyy {
+    font-weight: 400;
+    font-size: 2rem;
+    color: bisque;
+}
+
+@media (max-width: 700px) {
+     .digitalclock{
+        padding: 8px;
+       width: 335px;
+     }
+
+
+    .leftside #hours  {
+        font-size: 50px;
+    }
+
+    .rightside #minutes   {
+        font-size: 50px;
+    }
+    .rightside #dots   {
+        font-size: 50px;
+    }
+
+    .date #ddmmyy{
+        font-size: 25px;
+    }
+}
